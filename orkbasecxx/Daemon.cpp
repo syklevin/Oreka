@@ -195,7 +195,9 @@ void Daemon::Run()
 	//signal(SIGTSTP,SIG_IGN); /* ignore tty signals */
 	//signal(SIGTTOU,SIG_IGN);
 	//signal(SIGTTIN,SIG_IGN);
-	//signal(SIGHUP,signal_handler); /* catch hangup signal */
+	signal(SIGHUP,handle_signal); /* catch hangup signal */
+	signal(SIGINT, handle_signal);
+	signal(SIGTERM, handle_signal);
 #endif
 
 	Daemon::Singleton()->m_runHandler();
