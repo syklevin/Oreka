@@ -1,0 +1,8 @@
+Package: oreka
+Version: 1.0.0
+Architecture: all
+Section: base
+Priority: standard
+Depends: libssl-dev, libpcap-dev, libsndfile1-dev, libapr1-dev, libspeex-dev, liblog4cxx-dev, libxerces-c-dev
+Maintainer: syklev <syk.levin@gmail.com>
+Description: Audio streams recording daemon (VoIP and Sound Device)
